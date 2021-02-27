@@ -48,7 +48,12 @@ public class PagoFacade  extends AbstractFacade<Pago>
 
     @Override
     public double pago2(double pago){
-        return pago*0.12;
+        double iva = pago*0.12;
+        double total = pago+iva;
+        DoLogger.log().info("Precio: " + pago);
+        DoLogger.log().info("Iva: " + iva);
+        DoLogger.log().info("Total: " + total);
+        return iva;
     }
 
     @Override
