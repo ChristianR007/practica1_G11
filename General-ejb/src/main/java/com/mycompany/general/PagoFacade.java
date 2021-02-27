@@ -62,6 +62,7 @@ public class PagoFacade  extends AbstractFacade<Pago>
         for(Pago p : pagos) {
             total += p.getTotal();
         }
+        DoLogger().log().info("Suma: " + total);
         return total;
     }
 
