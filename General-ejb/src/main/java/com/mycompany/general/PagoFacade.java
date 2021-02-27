@@ -12,6 +12,7 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.UserTransaction;
 import com.mycompany.general.Pago;
 import com.mycompany.general.session.local.PagoFacadeLocal;
+import java.util.List;
 
 /**
  *
@@ -37,13 +38,21 @@ public class PagoFacade  extends AbstractFacade<Pago>
     }
 
     @Override
-<<<<<<< HEAD
     public double pago1(double cantidad) {
         return cantidad * 1.10;
-=======
-    public double pago2(double pago){
-        return pago*0.12;
->>>>>>> feature/req9
     }
 
+    @Override
+    public double pago2(double pago){
+        return pago*0.12;
+    }
+
+    @Override
+    public long pago3(List<Pago> pagos) {
+        long total = 0:
+        for(Pago p : pagos) {
+            total += p.getTotal();
+        }
+        return total;
+    }
 }

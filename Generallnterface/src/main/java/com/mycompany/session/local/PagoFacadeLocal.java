@@ -7,6 +7,7 @@ package com.mycompany.session.local;
 
 import javax.ejb.Local;
 import com.mycompany.entity.Pago;
+import java.util.List;
 /**
  *
  * @author Christian
@@ -21,7 +22,10 @@ public interface PagoFacadeLocal {
     
     void remove(Pago pago);
 
+    long pago3(List<Pago> pagos);
+
     double pago2(double pago);
     
-    double pago1(double cantidad)
+    double pago1(double cantidad);
+    
 }
