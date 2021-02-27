@@ -36,5 +36,9 @@ public class PagoFacade  extends AbstractFacade<Pago>
         super(Producto.class);
     }
 
+    @Override
+    public double pago2(double pago){
+        return pago*0.12;
+    }
 
 }
