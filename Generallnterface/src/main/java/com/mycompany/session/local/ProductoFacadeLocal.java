@@ -25,9 +25,11 @@ public interface ProductoFacadeLocal {
     
     public String metodo2();
     
-    public double obtenerArea(Producto producto);
+    public double obtenerPrecio(Producto producto);
     
-    public double obtenerPerimetro(Producto producto);
+    public String obtenerNombre(Producto producto);
     
     public Producto cambiarProductos(Producto rec1, Producto rec2);
+    
+    public void insertar(Producto producto) throws Exception;
 }
