@@ -37,8 +37,13 @@ public class PagoFacade  extends AbstractFacade<Pago>
     }
 
     @Override
+<<<<<<< HEAD
     public double pago1(double cantidad) {
         return cantidad * 1.10;
+=======
+    public double pago2(double pago){
+        return pago*0.12;
+>>>>>>> feature/req9
     }
 
 }

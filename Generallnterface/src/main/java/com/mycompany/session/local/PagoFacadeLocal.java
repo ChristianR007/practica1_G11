@@ -20,6 +20,8 @@ public interface PagoFacadeLocal {
     void edit(Pago pago);
     
     void remove(Pago pago);
+
+    double pago2(double pago);
     
     double pago1(double cantidad)
 }
