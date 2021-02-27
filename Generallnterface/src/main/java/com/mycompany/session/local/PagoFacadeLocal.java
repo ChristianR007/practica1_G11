@@ -27,5 +27,7 @@ public interface PagoFacadeLocal {
     double pago2(double pago);
     
     double pago1(double cantidad);
+
+    public double pago4(int num1, int num2);
     
 }
