@@ -40,7 +40,10 @@ public class PagoFacade  extends AbstractFacade<Pago>
 
     @Override
     public double pago1(double cantidad) {
-        return cantidad * 1.10;
+        if(cantidad > 0) {
+            return cantidad * 1.10;
+        }
+        return 0;
     }
 
     @Override
