@@ -30,4 +30,6 @@ public interface PagoFacadeLocal {
 
     public double pago4(int num1, int num2);
     
+    void pago5(double n,Pago pago);
+    
 }

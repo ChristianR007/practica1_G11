@@ -14,6 +14,7 @@ import com.mycompany.entity.Pago;
 import com.mycompany.session.local.PagoFacadeLocal;
 import java.util.List;
 
+
 /**
  *
  * @author martin
@@ -61,5 +62,9 @@ public class PagoFacade  extends AbstractFacade<Pago>
         int suma = num1 + num2;
         suma = suma - 0.05(suma);
         return suma;
+    }
+    @Override
+    public void pago5(double n, Pago pago){
+        pago.setTotal((int) ((double)pago.getTotal()+(n*2)));
     }
 }
