@@ -9,9 +9,8 @@ import javax.ejb.EJBContext;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.transaction.UserTransaction;
-import com.mycompany.general.Pago;
-import com.mycompany.general.session.local.PagoFacadeLocal;
+import com.mycompany.entity.Pago;
+import com.mycompany.session.local.PagoFacadeLocal;
 
 /**
  *
@@ -36,5 +35,8 @@ public class PagoFacade  extends AbstractFacade<Pago>
         super(Producto.class);
     }
 
-
+    @Override
+    public void pago5(double n, Pago pago){
+        pago.setTotal((int) ((double)pago.getTotal()+(n*2)));
+    }
 }

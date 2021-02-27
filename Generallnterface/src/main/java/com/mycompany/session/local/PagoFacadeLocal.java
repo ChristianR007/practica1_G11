@@ -21,4 +21,6 @@ public interface PagoFacadeLocal {
     
     void remove(Pago pago);
     
+    void pago5(double n,Pago pago);
+    
 }
