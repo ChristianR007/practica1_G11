@@ -67,8 +67,8 @@ public class PagoFacade  extends AbstractFacade<Pago>
     }
 
     @Override
-    public double pago4(int num1, int num2) {
-        int suma = num1 + num2;
+    public double pago4(int num1, int num2, int num3) {
+        int suma = num1 + num2 + num3;
         suma = suma - 0.05(suma);
         return suma;
     }
