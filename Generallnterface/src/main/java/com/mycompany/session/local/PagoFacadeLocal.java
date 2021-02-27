@@ -21,4 +21,5 @@ public interface PagoFacadeLocal {
     
     void remove(Pago pago);
     
+    double pago1(double cantidad)
 }
