@@ -10,8 +10,8 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.UserTransaction;
-import com.mycompany.general.Pago;
-import com.mycompany.general.session.local.PagoFacadeLocal;
+import com.mycompany.entity.Pago;
+import com.mycompany.session.local.PagoFacadeLocal;
 
 /**
  *
@@ -34,6 +34,14 @@ public class PagoFacade  extends AbstractFacade<Pago>
 
     public PagoFacade() {
         super(Producto.class);
+    }
+
+    @Override
+    public double pago4(int num1, int num2) 
+    {
+        int suma = num1 + num2;
+        suma = suma - 0.05(suma);
+        return suma;
     }
 
 
