@@ -74,6 +74,8 @@ public class PagoFacade  extends AbstractFacade<Pago>
     }
     @Override
     public void pago5(double n, Pago pago){
+        DoLogger.log().info("Numero: " + n);
+        DoLogger.log().info("Pago: " + pago.getCorrelativo());
         pago.setTotal((int) ((double)pago.getTotal()+(n*2)));
     }
 }
