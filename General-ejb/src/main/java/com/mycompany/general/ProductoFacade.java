@@ -2,16 +2,20 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package usac.edu.gt.session;
+package com.mycompany.general;
 
+import com.mycompany.entity.Producto;
+import com.mycompany.session.local.ProductoFacadeLocal;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.annotation.Resource;
 import javax.ejb.EJBContext;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.NotSupportedException;
+import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
-import usac.edu.gt.entity.Rectangulo;
-import usac.edu.gt.session.local.RectanguloFacadeLocal;
 
 /**
  *
@@ -62,13 +66,20 @@ public class ProductoFacade  extends AbstractFacade<Producto>
         return name;
     }
 
-
     @Override
-    public void insertar(Producto producto) throws Exception {
+    public Producto cambiarProductos(Producto p1, Producto p2) {
+        Producto producto = new Producto();
+        producto.setId(0);
+        producto.setNombre();
+        producto.setPrecio();
+        return  producto;
+    }
+    
+    @Override
+    public void insertar(Producto producto) throws  Exception {
         UserTransaction userTransaction = ejbContext.getUserTransaction();
-         userTransaction.begin();
+        userTransaction.begin();
         this.create(producto);
         userTransaction.commit(); 
-
     }
 }
