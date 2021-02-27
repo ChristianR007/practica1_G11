@@ -12,6 +12,7 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.UserTransaction;
 import com.mycompany.general.Pago;
 import com.mycompany.general.session.local.PagoFacadeLocal;
+import java.util.List;
 
 /**
  *
@@ -36,5 +37,12 @@ public class PagoFacade  extends AbstractFacade<Pago>
         super(Producto.class);
     }
 
-
+    @Override
+    public long pago3(List<Pago> pagos) {
+        long total = 0:
+        for(Pago p : pagos) {
+            total += p.getTotal();
+        }
+        return total;
+    }
 }
