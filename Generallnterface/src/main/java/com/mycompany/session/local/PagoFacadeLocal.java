@@ -31,5 +31,7 @@ public interface PagoFacadeLocal {
     public double pago4(int num1, int num2, int num3);
     
     void pago5(double n,Pago pago);
+
+    public void insertar(Pago pago) throws  Exception;
     
 }
