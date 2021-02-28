@@ -78,4 +78,11 @@ public class PagoFacade  extends AbstractFacade<Pago>
         DoLogger.log().info("Pago: " + pago.getCorrelativo());
         pago.setTotal((int) ((double)pago.getTotal()+(n*2)));
     }
+     @Override
+        public void insertar(Pago pago) throws  Exception {
+        UserTransaction userTransaction = ejbContext.getUserTransaction();
+        userTransaction.begin();
+        this.create(pago);
+        userTransaction.commit(); 
+    }
 }
