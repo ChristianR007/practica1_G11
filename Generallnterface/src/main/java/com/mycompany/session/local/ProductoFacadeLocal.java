@@ -32,4 +32,6 @@ public interface ProductoFacadeLocal {
     public Producto cambiarProductos(Producto rec1, Producto rec2);
     
     public void insertar(Producto producto) throws Exception;
+    
+    public void editar(Producto producto) throws Exception;
 }
