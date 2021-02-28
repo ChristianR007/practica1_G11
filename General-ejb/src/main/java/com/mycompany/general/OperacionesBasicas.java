@@ -17,4 +17,12 @@ public class OperacionesBasicas {
     public double resta(int num1, int num2){
         return num1 - num2;
     }
+
+    public factorial(int numero){
+        if(numero == 0){
+            return 1;
+        }else{
+            return(numero*factorial(numero-1));
+        }
+    }
 }
