@@ -13,4 +13,8 @@ public class OperacionesBasicas {
         if (val2 == 0) return null;
         return val1/val2;
     }
+
+    public double resta(int num1, int num2){
+        return num1 - num2;
+    }
 }
