@@ -14,6 +14,9 @@ public class Productos {
     
     @EJB
     private ProductoFacadeLocal productofcl;
+
+    @EJB
+    Private FacadeLocal facadeLocal;
     
     @PostConstruct
     public void init(){
