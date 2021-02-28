@@ -34,4 +34,6 @@ public interface ProductoFacadeLocal {
     public void insertar(Producto producto) throws Exception;
     
     public void editar(Producto producto) throws Exception;
+
+    public void eliminar(Producto producto) throws Exception;
 }
