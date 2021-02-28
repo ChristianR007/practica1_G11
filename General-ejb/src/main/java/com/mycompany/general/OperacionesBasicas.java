@@ -8,4 +8,9 @@ public class OperacionesBasicas {
     public int multiplicacion(int val1, int val2){
         return val1*val2;
     }
+    
+    public Double division(int val1, int val2) {
+        if (val2 == 0) return null;
+        return val1/val2;
+    }
 }
