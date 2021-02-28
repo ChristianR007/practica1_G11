@@ -90,4 +90,12 @@ public class ProductoFacade  extends AbstractFacade<Producto>
         this.edit(producto);
         userTransaction.commit();
     }
+
+    @Override
+    public void eliminar(Producto producto) throws Exception {
+        UserTransaction userTransaction = ejbContext.getUserTransaction();
+        userTransaction.begin();
+        this.remove(producto);
+        userTransaction.commit();
+    }
 }
