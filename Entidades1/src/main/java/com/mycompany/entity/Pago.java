@@ -19,6 +19,7 @@ public class Pago {
     
     private LinkedList<Producto> ListaProductos;
     private int total;
+    private String observaciones;
     @Id
     private int correlativo;
 
@@ -44,5 +45,13 @@ public class Pago {
 
     public void setTotal(int total) {
         this.total = total;
+    }
+
+    public void getObservaciones(){
+        return observaciones;
+    }
+
+    public void setObservaciones(String observaciones){
+        this.observaciones = observaciones;
     }
 }
